@@ -2,7 +2,7 @@
   <div id="app">
     <div id="head" class="row">
           <div class="col-md-6 logo"><img src="./assets/img/longxia.jpg" class="logo-img"></div>
-          <div class="col-md-6 title"><h2>{{title}}</h2></div>
+          <div class="col-md-6"><h2>{{title}}</h2></div>
     </div>
     <div class="row">
       <div class="left col-md-1">

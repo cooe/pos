@@ -26,9 +26,8 @@
                 </el-tabs>
 
                 <span class="wrapper">
-              <el-button type="success">结账</el-button>
-              <el-button type="warning">挂单</el-button>
-                  <el-button :plain="true" type="info">删除</el-button>
+              <el-button type="success" @click="checkOut()">结账</el-button>
+                  <el-button :plain="true" type="info" @click="delAllGoods()">删除</el-button>
             </span>
               </el-col>
               <!--商品展示-->
@@ -189,7 +188,26 @@
           },
         delSigleGoods(goods){
           console.log(goods);
+          this.checkoutData=this.checkoutData.filter(o => o.goodsId !=goods.goodsId);
           //this.tableData=this.tableData.filter(o => o.goodsId !=goods.goodsId);
+        },
+        //清空所有checkoutData中的所有商品
+        delAllGoods(){
+            this.checkoutData = [];
+        },
+        //结账
+        checkOut(){
+          if(this.totalCount !=0){
+            this.checkoutData = [];
+            this.totalCount = 0;
+            this.totalMoney = 0;
+            this.$message({
+              message: '结账成功，欢迎下次光临!',
+              type: 'success'
+            });
+          }else{
+            this.$message('没有买东西，你给什么钱！！！');
+          }
         }
 
       }
