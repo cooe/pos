@@ -175,8 +175,6 @@
             }
             //根据结果执行商品数量增加 或者商品新增的方法
             if(isHave){
-                console.log("数量加1");
-                this.checkoutData[temp].count ++;
                /* let arr = this.tableData.filter(o =>o.goodsId == goods.goodsId);
                 arr[0].count++;*/
             }else{
@@ -191,7 +189,7 @@
           },
         delSigleGoods(goods){
           console.log(goods);
-          this.tableData=this.tableData.filter(o => o.goodsId !=goods.goodsId);
+          //this.tableData=this.tableData.filter(o => o.goodsId !=goods.goodsId);
         }
 
       }
