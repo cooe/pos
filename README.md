@@ -1,6 +1,6 @@
 # pos
 
-> this is my first vue project
+> this is my first vue project,根据 jspang的思路完成，属于第一个和vue相关的例子，感谢jspang的的分享
 
 ## Build Setup
 
